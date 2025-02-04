@@ -31,8 +31,8 @@ MediAssist is an interactive voice-enabled AI healthcare assistant that provides
 2. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/mediassist.git
-   cd mediassist
+   git clone https://github.com/riyasingh99/MediAssist.git
+   cd MediAssist
    ```
 
 3. **Create and Activate Conda Environment**
