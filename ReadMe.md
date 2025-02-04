@@ -3,7 +3,7 @@
 MediAssist is an interactive voice-enabled AI healthcare assistant that provides medical information and guidance through both text and voice interactions. Built with state-of-the-art language models and speech processing capabilities, it offers a natural way to access healthcare information while maintaining appropriate medical guidance boundaries.
 
 # Demo Video
-<iframe width="600" height="400" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allowfullscreen></iframe>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/v=Sm_FbKgP8Wg" frameborder="0" allowfullscreen></iframe>
 
 ## Features
 
