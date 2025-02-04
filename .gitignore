@@ -1,1 +1,7 @@
-models/
+# Purpose: ignore files in git
+*.log
+*.log.*
+# remove everything in the models folder
+models/*
+/models/*
+!models/

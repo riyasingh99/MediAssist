@@ -2,6 +2,9 @@
 
 MediAssist is an interactive voice-enabled AI healthcare assistant that provides medical information and guidance through both text and voice interactions. Built with state-of-the-art language models and speech processing capabilities, it offers a natural way to access healthcare information while maintaining appropriate medical guidance boundaries.
 
+# Demo Video
+<iframe width="600" height="400" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allowfullscreen></iframe>
+
 ## Features
 
 - 🗣️ Voice Recognition & Text-to-Speech
@@ -58,7 +61,7 @@ MediAssist is an interactive voice-enabled AI healthcare assistant that provides
    - Place your medical knowledge base PDF in the project root directory
    - Update the PDF path in `AIVoiceAssistant.py` if needed:
      ```python
-     pdf_path="./your_knowledge_base.pdf"
+     pdf_path="./knowledge_base/your_knowledge_base.pdf"
      ```
 
 2. **Audio Setup**

@@ -150,16 +150,18 @@ class RAGPipeline:
             raise ValueError("Index not built or loaded. Process a document first.")
 
         # Get query embedding
-        query_embedding = ollama.embed(model=self.embedding_model, input=query)["embeddings"]
-        
+        query_embedding = ollama.embed(model=self.embedding_model, input=query)[
+            "embeddings"
+        ]
+
         # Convert to numpy array and ensure correct shape
         query_vector = np.array(query_embedding).astype("float32")
         query_vector = np.squeeze(query_vector)  # Remove extra dimensions
-        
+
         # Reshape to match index dimensionality (1, 768)
         query_vector = query_vector.reshape(1, -1)
-        
-        print(f"Query vector shape: {query_vector.shape}")  # Debug print
+
+        # print(f"Query vector shape: {query_vector.shape}")  # Debug print
 
         # Search index
         distances, indices = self.index.search(query_vector, k)
@@ -167,11 +169,13 @@ class RAGPipeline:
         # Prepare results
         results = []
         for idx, distance in zip(indices[0], distances[0]):
-            results.append({
-                "chunk": self.chunks[idx]["chunk_text"],
-                "page": self.chunks[idx]["page_number"],
-                "distance": float(distance),
-            })
+            results.append(
+                {
+                    "chunk": self.chunks[idx]["chunk_text"],
+                    "page": self.chunks[idx]["page_number"],
+                    "distance": float(distance),
+                }
+            )
 
         return results
 
@@ -190,7 +194,7 @@ Context:
 
 Question: {query}
 
-Answer: """
+Answer:"""
 
         # Generate response
         start_time = time.time()

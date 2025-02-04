@@ -38,7 +38,7 @@ coloredlogs.install(
 # Constants
 SAMPLE_RATE = 16000
 CHUNK_SIZE = 1024
-DEFAULT_MODEL_SIZE = "medium"
+DEFAULT_MODEL_SIZE = "turbo"
 DEFAULT_CHUNK_LENGTH = 10
 SILENCE_THRESHOLD = 3000
 BACKEND_URL = "http://localhost:8000"
@@ -46,16 +46,16 @@ BACKEND_URL = "http://localhost:8000"
 
 # Add this new function before the VoiceAssistantApp class
 def init_whisper_model(
-    model_size="medium", device="cuda", compute_type="float16", num_workers=10
+    model_size=DEFAULT_MODEL_SIZE, device="cuda", compute_type="float16", num_workers=10
 ):
     """Initialize Whisper model with proper error handling and progress bar management."""
     # Temporarily disable tqdm progress bars
     os.environ["HF_HUB_DISABLE_PROGRESS_BARS"] = "1"
 
     try:
-        logging.info(f"Loading Whisper model: {model_size}.en")
+        logging.info(f"Loading Whisper model: {model_size}")
         model = WhisperModel(
-            f"{model_size}.en",
+            f"{model_size}",
             device=device,
             compute_type=compute_type,
             num_workers=num_workers,
