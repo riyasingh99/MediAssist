@@ -4,7 +4,7 @@ MediAssist is an interactive voice-enabled AI healthcare assistant that provides
 
 # Demo Video
 
-[![Watch the video](https://img.youtube.com/vi/Sm_FbKgP8Wg/0.jpg)](https://www.youtube.com/watch?v=Sm_FbKgP8Wg)
+[![Watch the video](https://img.youtube.com/vi/JfnzOhuAhKA/0.jpg)](https://www.youtube.com/watch?v=JfnzOhuAhKA)
 
 ## Features
 
